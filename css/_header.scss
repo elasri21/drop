@@ -1,0 +1,154 @@
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px 30px;
+    @media #{$mobile} {
+        position: relative;
+        .nav-logo {
+            nav {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100vh;
+                width: 100%;
+                background-color: rgba(0, 0,0, .3);
+                .close-menu {
+                    display: block !important;
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    z-index: 11;
+                    cursor: pointer;
+                }
+                ul {
+                    padding-top: 150px;
+                    padding-left: 30px;
+                    display: block !important;
+                    width: 80%;
+                    height: 100%;
+                    margin-left: 20%;
+                    background-color: $white;
+                    li {
+                        position: relative;
+                        margin-bottom: 15px;
+                        ul {
+                            position: relative !important ;
+                            display: none !important;//
+                            left: -80px !important;
+                            top: unset !important;
+                        }
+                        &:hover {
+                            ul {
+                                display: block !important;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .log-reg {
+            display: none;
+        }
+        .menu {
+            display: block !important;
+        }
+    }
+
+    .nav-logo {
+        display: flex;
+        .logo {
+            margin-right: 20px;
+        }
+        nav {
+            .close-menu {
+                display: none;
+            }
+            ul {
+                display: flex;
+                
+                li {
+                    position: relative;
+                    margin-right: 15px;
+                    color: $text-color;
+                    cursor: pointer;
+                    .down {
+                        margin-left: 10px;
+                    }
+                    .up {
+                        margin-left: 10px;
+                        display: none;
+                    }
+
+                    ul {
+                        opacity: 0;
+                        display: block;
+                        width: fit-content;
+                        padding: 10px;
+                        background-color: $white;
+                        border-radius: 5px;
+                        position: relative;
+                        left: -28px;
+                        top: 20px;
+                        li {
+                            // width: 100%;
+                            margin-bottom: 10px;
+                            display: flex;
+                            margin: 0 !important;
+                            img {
+                                margin-right: 10px;
+                            }
+                            a {
+                                color: $text-color;
+                                &:hover {
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        color: $text-color;
+                    }
+                    &:hover > {
+                        
+                        a {
+                            color: $black;
+                        }
+ 
+                        ul {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .log-reg {
+        button {
+            color: $text-color;
+            &.login {
+                margin-right: 20px;
+            }
+            &.register {
+                border: 1px solid $text-color;
+                &:hover {
+                    border-color: $black;
+                }
+            }
+            &:hover {
+                color: $black;
+            }
+        }
+        
+
+    }
+    .menu {
+        display: none;
+        cursor: pointer;
+    }
+
+}
+//fixing mobile nav
